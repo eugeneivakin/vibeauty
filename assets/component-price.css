@@ -99,3 +99,10 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+.price .price-item--percent {
+  color: rgba(var(--color-foreground), 0.75);
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
