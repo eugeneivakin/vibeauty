@@ -1,0 +1,7 @@
+.section-page-collapsible .accordion {
+  margin-top: 0;
+}
+
+.section-page-collapsible .accordion__content {
+  padding-block: 0.6rem;
+}

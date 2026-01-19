@@ -3416,6 +3416,22 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "page_collapsible": {
+      "name": "Page Collapsible",
+      "settings": {
+        "heading": {
+          "info": "Include a heading that explains the content.",
+          "label": "Heading",
+          "default": "Collapsible row"
+        },
+        "page": {
+          "label": "Page"
+        }
+      },
+      "presets": {
+        "name": "Page Collapsible"
+      }
     }
   }
 }
