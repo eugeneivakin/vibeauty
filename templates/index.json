@@ -344,6 +344,49 @@
         "padding_bottom_mobile": 0
       }
     },
+    "benefits_GVGgqk": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_EmgfaR": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Heading",
+            "content": "<p>Content</p>"
+          }
+        },
+        "benefit_yzJyUg": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Heading",
+            "content": "<p>Content</p>"
+          }
+        },
+        "benefit_PcjQpD": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Heading",
+            "content": "<p>Content</p>"
+          }
+        },
+        "benefit_GTd47Q": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Heading",
+            "content": "<p>Content</p>"
+          }
+        }
+      },
+      "block_order": ["benefit_EmgfaR", "benefit_yzJyUg", "benefit_PcjQpD", "benefit_GTd47Q"],
+      "name": "Benefits",
+      "settings": {
+        "section_background": "#96B2A1",
+        "section_color": "#FFFFFF",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
     "newsletter_pw8xb9": {
       "type": "newsletter",
       "blocks": {
@@ -395,6 +438,7 @@
     "two_column_R33Mt8",
     "custom_video_rWwmPi",
     "page_collapsible_Yyat9U",
+    "benefits_GVGgqk",
     "newsletter_pw8xb9"
   ]
 }
