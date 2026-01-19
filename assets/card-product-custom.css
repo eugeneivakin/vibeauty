@@ -123,6 +123,7 @@
 }
 
 .card .quick-add svg {
+  pointer-events: none;
   width: 13px;
 }
 
