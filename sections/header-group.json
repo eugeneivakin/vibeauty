@@ -22,9 +22,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+      "block_order": ["announcement-bar-0"],
       "settings": {
         "background_color": "#5b886c",
         "text_color": "#ffffff",
@@ -69,7 +67,7 @@
             "additional_label_color_5": "#212529",
             "additional_label_font_weight_5": 400,
             "additional_link_5": "shopify://collections/special-fluids-1",
-            "additional_icon_5": "shopify://shop_images/image3134.png",
+            "additional_icon_5": "shopify://shop_images/image3134.png"
           }
         },
         "additional_link_ymTrmJ": {
@@ -90,16 +88,12 @@
           }
         }
       },
-      "block_order": [
-        "categories_ichcR8",
-        "additional_link_ymTrmJ",
-        "additional_link_ebKxNW"
-      ],
+      "block_order": ["categories_ichcR8", "additional_link_ymTrmJ", "additional_link_ebKxNW"],
       "settings": {
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "none",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-4",
         "menu_color_scheme": "scheme-1",
@@ -113,8 +107,5 @@
       }
     }
   },
-  "order": [
-    "announcement-bar",
-    "header"
-  ]
+  "order": ["announcement-bar", "header"]
 }
