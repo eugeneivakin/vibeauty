@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Fast delivery 📦 within 1 to 3 days",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "background_color": "#5b886c",
+        "text_color": "#ffffff",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 4,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "categories_ichcR8": {
+          "type": "categories",
+          "settings": {
+            "menu": "categories-menu",
+            "button_name": "Catalog",
+            "button_image": "shopify://shop_images/ion_menu-outline-white.png",
+            "additional_label_1": "Gel polish",
+            "additional_label_color_1": "#212529",
+            "additional_label_font_weight_1": 400,
+            "additional_link_1": "shopify://collections/gel-polish-1",
+            "additional_icon_1": "shopify://shop_images/image3129.png",
+            "additional_label_2": "Base coats",
+            "additional_label_color_2": "#212529",
+            "additional_label_font_weight_2": 400,
+            "additional_link_2": "shopify://collections/base-coats-1",
+            "additional_icon_2": "shopify://shop_images/image3131.png",
+            "additional_label_3": "Top coats",
+            "additional_label_color_3": "#212529",
+            "additional_label_font_weight_3": 400,
+            "additional_link_3": "shopify://collections/top-coats",
+            "additional_icon_3": "shopify://shop_images/image3131.png",
+            "additional_label_4": "Nail gels",
+            "additional_label_color_4": "#212529",
+            "additional_label_font_weight_4": 400,
+            "additional_link_4": "shopify://collections/nail-gels-1",
+            "additional_icon_4": "shopify://shop_images/image3133.png",
+            "additional_label_5": "Special fluids",
+            "additional_label_color_5": "#212529",
+            "additional_label_font_weight_5": 400,
+            "additional_link_5": "shopify://collections/special-fluids-1",
+            "additional_icon_5": "shopify://shop_images/image3134.png",
+          }
+        },
+        "additional_link_ymTrmJ": {
+          "type": "additional_link",
+          "settings": {
+            "link_label": "Shipping & Payment",
+            "link_url": "shopify://pages/shipping-payment-1",
+            "link_font_weight": 400,
+            "link_icon": "shopify://shop_images/delivery-icon.png"
+          }
+        },
+        "additional_link_ebKxNW": {
+          "type": "additional_link",
+          "settings": {
+            "link_label": "PARTNERSHIP",
+            "link_url": "shopify://pages/partnership",
+            "link_font_weight": 600
+          }
+        }
+      },
+      "block_order": [
+        "categories_ichcR8",
+        "additional_link_ymTrmJ",
+        "additional_link_ebKxNW"
+      ],
+      "settings": {
+        "logo_position": "middle-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "none",
+        "show_line_separator": true,
+        "color_scheme": "scheme-4",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

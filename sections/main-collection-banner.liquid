@@ -1,0 +1,54 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+    }
+  }
+{%- endstyle -%}
+{% if collection.image != blank or collection.description != blank %}
+  <div class="collection-hero collection-hero--with-image">
+    <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <div class="collection-hero__hidden">
+
+      </div>
+      <div class="collection-hero__wrapper">
+        {%- if collection.image != blank -%}
+          <div class="collection-hero__image-container">
+            {{
+              collection.image
+              | image_url: width: collection.image.width, height: collection.image.height
+              | image_tag: class: 'collection-hero__image', alt: collection.image.alt
+            }}
+          </div>
+        {%- endif -%}
+        <div class="collection-hero__text-wrapper">
+          {%- if section.settings.show_collection_description -%}
+            <div class="collection-hero__description rte">{{ collection.description }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+        {% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,172 @@
+{{ 'our-mission-grid.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.background_color }};
+  }
+  #shopify-section-{{ section.id }} .our-mission-grid {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .our-mission-grid__left {
+    background: {{ section.settings.main_block_background }};
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .our-mission-grid {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+  {% for block in section.blocks %}
+    .our-mission-grid__item--{{ block.id }} {
+      background: {{ block.settings.background }};
+    }
+  {% endfor %}
+{% endstyle %}
+<div class="our-mission-grid">
+  <div class="page-width">
+    <div class="our-mission-grid__wrapper">
+      <div class="our-mission-grid__left">
+        {% unless section.settings.main_block_header == blank %}
+          <h3>
+            {{ section.settings.main_block_header }}
+          </h3>
+        {% endunless %}
+        {% unless section.settings.main_block_description == blank %}
+          <div class="our-mission-grid__left--description">
+            {{ section.settings.main_block_description }}
+          </div>
+        {% endunless %}
+      </div>
+      <div class="our-mission-grid__right">
+        {% for block in section.blocks %}
+          <div class="our-mission-grid__item our-mission-grid__item--{{ block.id }} ">
+            {% unless block.settings.header == blank %}
+              <h3> {{ block.settings.header }} </h3>
+            {% endunless %}
+            {% unless block.settings.description == blank %}
+              <div class="our-mission-grid__right--description">
+                {{ block.settings.description }}
+              </div>
+            {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Our mission grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section general settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fbfbfb"
+    },
+    {
+      "type": "color",
+      "id": "main_block_background",
+      "label": "Main block Background color",
+      "default": "#F1F0EC"
+    },
+    {
+      "type": "text",
+      "id": "main_block_header",
+      "label": "Main block header",
+      "default": "Community"
+    },
+    {
+      "type": "richtext",
+      "id": "main_block_description",
+      "label": "Main block description",
+      "default": "<p><strong>We strongly believe in the power of community and connections.</strong> Our mission is to bring together nail technicians and trainers who share our passion for quality training and products for the nail industry.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Section Padding Top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 22,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "right_block",
+      "name": "Right block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background color",
+          "default": "#F1F0EC"
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header",
+          "default": "Transparency"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p><strong>High-quality products with certification that confirms the quality.</strong> Our goal is to help you find a product that perfectly matches your needs and values while being honest. At ViBeauty, you can be sure that every product you buy is a priority for both your well-being and the environment.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our mission grid"
+    }
+  ]
+}
+{% endschema %}

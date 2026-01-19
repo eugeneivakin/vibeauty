@@ -1,0 +1,27 @@
+.related-products {
+  display: block;
+}
+
+.related-products__heading {
+  margin: 0 0 3rem;
+}
+.related-products .product-form__input {
+  flex: unset; 
+  padding:0;
+  margin: 0 ; 
+  max-width:none; 
+  border: none;
+}
+.related-products__heading::after{
+  content: '';
+    height: 5px;
+    margin-top: 20px;
+    width: 50%;
+    background: #96B2A1;
+    display: block;
+}
+@media(max-width:990px) {
+  .related-products.page-width{
+    padding: 0 16px;
+  }
+}

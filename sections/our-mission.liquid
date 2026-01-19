@@ -1,0 +1,176 @@
+{{ 'our-mission.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.background_color }};
+  }
+  #shopify-section-{{ section.id }} .our-mission {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .our-mission__right {
+    background: {{ section.settings.image_background }};
+  }
+  #shopify-section-{{ section.id }} .our-mission__highlights {
+    background: {{ section.settings.highlights_tile_background }};
+  }
+  @media(max-width: 768px) {
+    #shopify-section-{{ section.id }} .our-mission {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="our-mission">
+  <div class="page-width">
+    <div class="our-mission__wrapper">
+      <div class="our-mission__left">
+        {% unless section.settings.header == blank %}
+          <h1>{{ section.settings.header }}</h1>
+        {% endunless %}
+        {% unless section.settings.description == blank %}
+          <div class="our-mission__left--description">{{ section.settings.description }}</div>
+        {% endunless %}
+        {% unless section.settings.highlights_header == blank %}
+          <h2>{{ section.settings.highlights_header }}</h2>
+        {% endunless %}
+        <div class="our-mission__highlights">
+          {% unless section.settings.highlights_title == blank %}
+            <h3>{{ section.settings.highlights_title }}</h3>
+          {% endunless %}
+          {% unless section.settings.highlights_description == blank %}
+            <div class="our-mission__highlights--description">{{ section.settings.highlights_description }}</div>
+          {% endunless %}
+        </div>
+      </div>
+      <div class="our-mission__right">
+        {% unless section.settings.image == blank %}
+          {{
+            section.settings.image
+            | image_url: width: section.settings.image.width
+            | image_tag: section.settings.image.alt
+          }}
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our mission",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section general settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fbfbfb"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header",
+      "default": "Our story"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p><strong>ViBeauty's journey began with our interest in smart and hypoallergenic solutions for nail technicians in the luxury nail industry.</strong> We spent a lot of time searching for the best products and manicure products to meet the full needs of professionals and beginners alike, so we opted for the professional manicure brand PNB and the vegan brand Joia. Each ingredient in our products meets the highest standards of quality, safety, effectiveness, and environmental responsibility, having all the necessary certifications for the European countries.</p> <p><strong>Our mission is to improve the European nail service market by providing a safe, hypoallergenic, premium quality product that will be available to every nail technician, safe for the health of the technician and the client, and friendly to nature and animals.</strong></p> <p><strong>The safety of PNB and Joia products for the health of our customers is our most important task and strategic goal.</strong></p>"
+    },
+    {
+      "type": "text",
+      "id": "highlights_header",
+      "label": "Highlights header",
+      "default": "We provide sustainable development"
+    },
+    {
+      "type": "color",
+      "id": "highlights_tile_background",
+      "label": "Highlights tile background color",
+      "default": "#f1f0ec"
+    },
+    {
+      "type": "text",
+      "id": "highlights_title",
+      "label": "Highlights title",
+      "default": "ViBeauty Nail Academy"
+    },
+    {
+      "type": "richtext",
+      "id": "highlights_description",
+      "label": "Highlights description",
+      "default": "<p>Development is the most important trend of the 21st century, so we develop ourselves and create such an opportunity for everyone. <strong>Our ViBeauty Nail Academy has created courses for both beginners and professional nail technicians who want to improve their skills.</strong> The training takes place using products of the professional brand PNB, so you have the opportunity not only to improve your skills, but also to get new sensations from working with a new brand for you.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Right Image"
+    },
+    {
+      "type": "color",
+      "id": "image_background",
+      "label": "Right image background",
+      "default":"#f1f0ec"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Section Padding Top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 22,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our mission"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,235 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div class="custom-page__wrapper">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'customer_services' %}
+          <div class="customer-services">
+            {% unless block.settings.header == blank %}
+              <div class="customer-services__header">
+                {{ block.settings.header }}
+              </div>
+            {% endunless %}
+            <ul class="customer-services__list">
+              {% for index in (1..6) %}
+                {% assign link_label_handle = 'link_label_' | append: index %}
+                {% assign link_url_handle = 'link_url_' | append: index %}
+                {% if block.settings[link_label_handle] != blank and block.settings[link_url_handle] != blank %}
+                  <li class="customer-services__item">
+                    <a
+                      class="
+                        customer-services__link
+                        {% if request.path == block.settings[link_url_handle] %}
+                        active
+                        {% endif %}
+                      "
+                      href="{{ block.settings[link_url_handle] }}"
+                    >
+                      {{ block.settings[link_label_handle] }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      {% endcase %}
+    {% endfor %}
+    <div>
+      <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-page__wrapper {
+    display: flex;
+  }
+  .customer-services {
+    min-width: 330px;
+  }
+  .customer-services__header {
+    color: #678573;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .customer-services__header::after {
+    content: '';
+    height: 2px;
+    margin-top: 15px;
+    width: 217px;
+    background: #96b2a1;
+    display: block;
+  }
+  .customer-services__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 25px;
+  }
+  .customer-services__link {
+    display: block;
+    text-decoration: none;
+    color: #414141;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 26px;
+  }
+  .customer-services__link.active {
+    font-weight: 700;
+    text-decoration-line: underline;
+  }
+  @media (max-width: 992px) {
+    .custom-page__wrapper {
+      flex-wrap: wrap;
+    }
+    .customer-services__list {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .customer-services__link {
+      font-size: 18px;
+      padding-bottom: 15px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "customer_services",
+      "name": "Customer services",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header",
+          "default": "Customer service"
+        },
+        {
+          "type": "text",
+          "id": "link_label_1",
+          "label": "Link label 1",
+          "default": "Contact"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link url 1"
+        },
+
+        {
+          "type": "text",
+          "id": "link_label_2",
+          "label": "Link label 2",
+          "default": "For wholesale customers"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link url 2"
+        },
+
+        {
+          "type": "text",
+          "id": "link_label_3",
+          "label": "Link label 3",
+          "default": "Shipping & Payment"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link url 3"
+        },
+
+        {
+          "type": "text",
+          "id": "link_label_4",
+          "label": "Link label 4",
+          "default": "Partnership"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link url 4"
+        },
+
+        {
+          "type": "text",
+          "id": "link_label_5",
+          "label": "Link label 5",
+          "default": "Privacy policy"
+        },
+        {
+          "type": "url",
+          "id": "link_url_5",
+          "label": "Link url 5"
+        },
+
+        {
+          "type": "text",
+          "id": "link_label_6",
+          "label": "Link label 6",
+          "default": "Return policy"
+        },
+        {
+          "type": "url",
+          "id": "link_url_6",
+          "label": "Link url 6"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

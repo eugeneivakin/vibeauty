@@ -1,0 +1,294 @@
+{% style %}
+  #shopify-section-{{ section.id }} .content-with-benefits {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .content-with-benefits {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .content-with-benefts__left {
+    background: {{ section.settings.left_block_background }};
+  }
+  {% for block in section.blocks %}
+    .right-benefits-blocks__item--{{ block.id }} {
+      background: {{ block.settings.background }};
+    }
+  {% endfor %}
+{% endstyle %}
+<div class="content-with-benefits">
+  <div class="page-width">
+    <div class="content-with-benefits__wrapper">
+      <div class="content-with-benefts__left left-content-block">
+        {% unless section.settings.title == blank %}
+          <div class="left-content-block__title">
+            {{ section.settings.title }}
+          </div>
+        {% endunless %}
+        {% unless section.settings.description == blank %}
+          <div class="left-content-block__description">
+            {{ section.settings.description }}
+          </div>
+        {% endunless %}
+      </div>
+      <div class="content-with-benefits__right right-benefits-blocks">
+        {% for block in section.blocks %}
+          <div class="right-benefits-blocks__wrapper">
+            {% for index in (1..3) %}
+              {% assign icon_handle = 'icon_' | append: index %}
+              {% assign text_handle = 'text_' | append: index %}
+              {% if block.settings[icon_handle] != blank or block.settings[text_handle] != blank %}
+                <div class="right-benefits-blocks__item right-benefits-blocks__item--{{ block.id }}">
+                  {% unless block.settings[icon_handle] == blank %}
+                    {{
+                      block.settings[icon_handle]
+                      | image_url: width: block.settings[icon_handle].width, height: block.settings[icon_handle].height
+                      | image_tag: class: 'right-benefits-blocks__icon', alt: block.settings[icon_handle].alt
+                    }}
+                  {% endunless %}
+                  {% unless block.settings[text_handle] == blank %}
+                    <div class="right-benefits-blocks__text">
+                      {{ block.settings[text_handle] }}
+                    </div>
+                  {% endunless %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .content-with-benefits__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .content-with-benefts__left {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .content-with-benefits__right {
+    width: 100%;
+  }
+  .left-content-block__title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    line-height: 30px;
+    color: #fff;
+    padding-bottom: 30px;
+  }
+  .left-content-block__description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+  }
+  .left-content-block__description p {
+    margin: 0;
+  }
+  .right-benefits-blocks__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  .right-benefits-blocks__wrapper:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .right-benefits-blocks__item {
+    width: calc(50% - 10px);
+    padding: 14px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+  }
+  .right-benefits-blocks__icon {
+    width: 94px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .right-benefits-blocks__text {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+    color: #414141;
+  }
+  
+  @media (min-width: 768px) {
+    .content-with-benefts__left {
+      margin-bottom: 0;
+    }
+    .content-with-benefts__left,
+    .content-with-benefits__right {
+      width: 48.5%;
+    }
+    .right-benefits-blocks__item {
+      width: calc(33.333% - 10px);
+    }
+    .right-benefits-blocks__wrapper {
+      flex-wrap: nowrap;
+    }
+    .right-benefits-blocks__text {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .left-content-block__title {
+      font-size: 25px;
+      line-height: 33px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Content with benefits",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section general settings"
+    },
+    {
+      "type": "color",
+      "id": "left_block_background",
+      "label": "Left block background",
+      "default": "#96B2A1"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Left block title",
+      "default": "ViBeauty's journey began with our interest in smart and hypoallergenic solutions for nail technicians in the luxury nail industry"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Left block description",
+      "default": "<p>We spent a lot of time searching for the best products and manicure products to meet the full needs of professionals and beginners alike, so we opted for the professional manicure brand PNB and the vegan brand Joia.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding top",
+      "step": 1,
+      "min": 0,
+      "max": 100,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 50,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Section settings for mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Section Padding Top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 50,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Blocks background color",
+          "default": "#F6F6F6"
+        },
+        {
+          "type": "header",
+          "content": "Settings for block 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Text 1",
+          "default": "QUALITY"
+        },
+        {
+          "type": "header",
+          "content": "Settings for block 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Text 2",
+          "default": "SAFETY"
+        },
+        {
+          "type": "header",
+          "content": "Settings for block 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "Text 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content with benefits"
+    }
+  ]
+}
+{% endschema %}

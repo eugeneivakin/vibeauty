@@ -1,0 +1,91 @@
+{% style %}
+  #shopify-section-{{ section.id }} .section-video-autoplay{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media(max-width: 768px) {
+      #shopify-section-{{ section.id }} .section-video-autoplay{
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+  .section-video-autoplay video { 
+    width: 100%;
+  }
+{% endstyle %}
+<div class="section-video-autoplay">
+  <div class="page-width">
+    {% unless section.settings.video == blank %}
+      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true }}
+    {% endunless %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Video autoplay",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General settings"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Section settings for mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Section Padding Top",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Section Padding bottom",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 48,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video autoplay"
+    }
+  ]
+}
+{% endschema %}

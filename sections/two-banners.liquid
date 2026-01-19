@@ -1,0 +1,136 @@
+{% style %}
+  #shopify-section-{{ section.id }} .two-banners {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .two-banners {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px
+    }
+  }
+{% endstyle %}
+
+<div class="two-banners">
+  <div class="page-width">
+    <div class="two-banners__wrapper">
+      {% unless section.settings.first_banner == blank %}
+        <a class="two-banners__item" href="{{ section.settings.first_banner_url }}">
+          {{
+            section.settings.first_banner
+            | image_url: width: section.settings.first_banner.width, height: section.settings.first_banner.height
+            | image_tag:alt: section.settings.first_banner.alt
+          }}
+        </a>
+      {% endunless %}
+      {% unless section.settings.second_banner == blank %}
+        <a class="two-banners__item" href="{{ section.settings.second_banner_url }}">
+          {{
+            section.settings.second_banner
+            | image_url: width: section.settings.second_banner.width, height: section.settings.second_banner.height
+            | image_tag:alt: section.settings.second_banner.alt
+          }}
+        </a>
+      {% endunless %}
+    </div>
+  </div>
+</div>
+<style>
+  .two-banners .two-banners__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .two-banners .two-banners__item {
+    width: 100%;
+  }
+  .two-banners .two-banners__item img {
+    width: 100%;
+  }
+  @media(max-width:990px) {
+    .two-banners .page-width{
+      padding: 0 16px;
+    }
+  }
+  @media(min-width: 768px) {
+    .two-banners .two-banners__item {
+      width: 48.5%;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Two banners",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section general settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "first_banner",
+      "label": "First image"
+    },
+    {
+      "type": "url",
+      "id": "first_banner_url",
+      "label": "First image url"
+    },
+    {
+      "type": "image_picker",
+      "id": "second_banner",
+      "label": "Second image"
+    },
+    {
+      "type": "url",
+      "id": "second_banner_url",
+      "label": "Second banner url"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding top (Mobile)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding bottom (Mobile)",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two banners"
+    }
+  ]
+}
+{% endschema %}
