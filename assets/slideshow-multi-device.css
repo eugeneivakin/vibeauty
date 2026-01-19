@@ -18,6 +18,14 @@
   z-index: 5;
 }
 
+.slideshow-multi-device h1 {
+  margin: 0 0 2rem;
+}
+
+.slideshow-multi-device h2 {
+  margin: 0 0 1rem;
+}
+
 .slideshow-multi-device .slide__media {
   position: relative;
   z-index: 1;
