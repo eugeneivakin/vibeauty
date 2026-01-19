@@ -1,1 +1,398 @@
-{"sections":{"banner_with_link_PXGj6t":{"type":"banner-with-link","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Frame_3_2.jpg","link":"shopify:\/\/collections","padding_top":48,"padding_bottom":48,"padding_top_mobile":48,"padding_bottom_mobile":48}},"slideshow_multi_device_Xc7PWC":{"type":"slideshow-multi-device","blocks":{"slide_ttnETN":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/Kreo3_rizdvo_7.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2_6.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3_6.jpg","link":"https:\/\/vibeauty.nl\/collections\/strong-iron-gels","alt_text":""}},"slide_Wg7tHd":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2_03dfe9ef-1228-4f2d-84df-9cf322e518a2.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3_34f963da-791b-4c3f-8fba-5e402496eee2.jpg","link":"https:\/\/vibeauty.nl\/collections\/sale","alt_text":""}},"slide_Jf3FKd":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3_-2.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2-1.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3-1.jpg","link":"https:\/\/vibeauty.nl\/products\/draagbare-stofafzuiger-voor-manicure-pedicure-met-filter-ulka-nano-white","alt_text":""}},"slide_KwXDYk":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3_-3.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2-2.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3-2.jpg","link":"https:\/\/vibeauty.nl\/products\/actie-6-2-wintertinten-polish-pnb","alt_text":""}},"slide_NqVMEU":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3_-1.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2-5.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3-5.jpg","link":"https:\/\/vibeauty.nl\/collections\/sale","alt_text":""}},"slide_EiTWXa":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3_-4.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2-3.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3-3.jpg","link":"https:\/\/vibeauty.nl\/collections\/builder-gels","alt_text":""}},"slide_6BNrhQ":{"type":"slide","settings":{"image_desktop":"shopify:\/\/shop_images\/3_-5.jpg","image_tablet":"shopify:\/\/shop_images\/Banner_4.2-4.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_4.3-4.jpg","link":"https:\/\/vibeauty.nl\/collections\/gel-nail-joia","alt_text":""}}},"block_order":["slide_ttnETN","slide_Wg7tHd","slide_Jf3FKd","slide_KwXDYk","slide_NqVMEU","slide_EiTWXa","slide_6BNrhQ"],"name":"Responsive Slideshow","settings":{}},"collection_list_7WPQBF":{"type":"collection-list","blocks":{"featured_collection_WM3YpK":{"type":"featured_collection","settings":{"collection":"uv-led-4-in-1-biab-gel-pnb"}},"featured_collection_QpqNHz":{"type":"featured_collection","settings":{"collection":"dry-heat"}},"featured_collection_7xDWPG":{"type":"featured_collection","settings":{"collection":"nail-are-polish-4in1-joia-vegan"}},"featured_collection_9KdH7C":{"type":"featured_collection","settings":{"collection":"nail-dust-collector"}},"featured_collection_bqCMtP":{"type":"featured_collection","settings":{"collection":"nail-and-cuticle-care"}},"featured_collection_cWnxmj":{"type":"featured_collection","settings":{"collection":"builder-gels"}}},"block_order":["featured_collection_WM3YpK","featured_collection_QpqNHz","featured_collection_7xDWPG","featured_collection_9KdH7C","featured_collection_bqCMtP","featured_collection_cWnxmj"],"settings":{"title":"Popular categories","heading_size":24,"image_ratio":"square","show_view_all":false,"swipe_on_mobile":false,"padding_top":36,"padding_bottom":36,"padding_top_mobile":36,"padding_bottom_mobile":36}},"featured_collection_axr3cq":{"type":"featured-collection","settings":{"title":"NEW ITEMS","heading_size":24,"description":"","show_description":false,"description_style":"body","collection":"new-items","products_to_show":8,"columns_desktop":4,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_jznMjd":{"type":"featured-collection","settings":{"title":"BESTSELLERS","heading_size":24,"description":"","show_description":false,"description_style":"body","collection":"bestsellers","products_to_show":8,"columns_desktop":4,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"two_column_R33Mt8":{"type":"two-column","blocks":{"column_Mn6xXD":{"type":"column","settings":{"title":"PNB (Professional Nail Boutique)","title_color":"#414141","title_font_weight":700,"title_icon_1":"shopify:\/\/shop_images\/Group_1008_1.png","title_icon_width_1":113,"title_icon_height_1":67,"title_icon_width_mobile_1":90,"title_icon_height_mobile_1":53,"title_icon_2":"shopify:\/\/shop_images\/animals_1.png","title_icon_width_2":62,"title_icon_height_2":66,"title_icon_width_mobile_2":50,"title_icon_height_mobile_2":53,"title_icon_width_3":62,"title_icon_height_3":113,"title_icon_width_mobile_3":50,"title_icon_height_mobile_3":50,"description":"<ul><li>Durability and reliability of the coating<\/li><li><strong>Hypoallergenic\/formula 7 & 12 Free;<\/strong><\/li><li>Innovation and eco technology\/certified products made in USA<\/li><li>Represented in <strong>20 countries\/more than 300 dealers<\/strong> all over the world<\/li><\/ul>","description_color":"#414141","image":"shopify:\/\/shop_images\/banner-pnb.jpg"}},"column_aTYDTm":{"type":"column","settings":{"title":"JOIA VEGAN","title_color":"#414141","title_font_weight":700,"title_icon_1":"shopify:\/\/shop_images\/vegan.png","title_icon_width_1":50,"title_icon_height_1":54,"title_icon_width_mobile_1":40,"title_icon_height_mobile_1":47,"title_icon_2":"shopify:\/\/shop_images\/animals.png","title_icon_width_2":51,"title_icon_height_2":62,"title_icon_width_mobile_2":45,"title_icon_height_mobile_2":54,"title_icon_3":"shopify:\/\/shop_images\/image_3137.png","title_icon_width_3":62,"title_icon_height_3":63,"title_icon_width_mobile_3":45,"title_icon_height_mobile_3":54,"description":"<ul><li>First <strong>VEGAN brand<\/strong> og gel polishes<\/li><li>The products do not contain components of animal origin and are <strong>not tested on animals<\/strong><\/li><li>All used JOIA vegan vials are collected for proper recycling and disposal<\/li><\/ul>","description_color":"#414141","image":"shopify:\/\/shop_images\/banner-joia.jpg"}}},"block_order":["column_Mn6xXD","column_aTYDTm"],"settings":{"header":"About Our Manufacturing","header_color":"#5b886c","header_font_weight":700,"padding_top":48,"padding_bottom":48,"header_padding_bottom":16,"padding_top_mobile":48,"padding_bottom_mobile":48,"header_padding_bottom_mobile":16}},"custom_video_rWwmPi":{"type":"custom-video","settings":{"video":"shopify:\/\/files\/videos\/vibeauty-main-video.mp4","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"page_mkAKzw":{"type":"page","settings":{"page":"nail-wholesale-vibeauty-nl","heading_size":24,"padding_top":36,"padding_bottom":36,"padding_top_mobile":16,"padding_bottom_mobile":0}},"newsletter_pw8xb9":{"type":"newsletter","blocks":{"heading_hiR6DR":{"type":"heading","settings":{"heading":"Can we help you?","heading_size":24,"heading_color":"#ffffff","heading_font_weight":700}},"link_VVnWWP":{"type":"link","settings":{"link_label":"info@vibeauty.nl","link_url":"mailto:info@vibeauty.nl"}},"link_XdeJnK":{"type":"link","settings":{"link_icon":"shopify:\/\/shop_images\/Vector_1.png","link_label":"WhatsApp","link_url":"https:\/\/api.whatsapp.com\/send?phone=31611534831"}},"email_form_ddQUqj":{"type":"email_form","settings":{}}},"block_order":["heading_hiR6DR","link_VVnWWP","link_XdeJnK","email_form_ddQUqj"],"settings":{"background":"#96b2a1","padding_top":52,"padding_bottom":24,"padding_top_mobile":24,"padding_bottom_mobile":12}}},"order":["banner_with_link_PXGj6t","slideshow_multi_device_Xc7PWC","collection_list_7WPQBF","featured_collection_axr3cq","featured_collection_jznMjd","two_column_R33Mt8","custom_video_rWwmPi","page_mkAKzw","newsletter_pw8xb9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_with_link_PXGj6t": {
+      "type": "banner-with-link",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Frame_3_2.jpg",
+        "link": "shopify://collections",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "slideshow_multi_device_Xc7PWC": {
+      "type": "slideshow-multi-device",
+      "blocks": {
+        "slide_bj7qVr": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_desktop": "shopify://shop_images/Kreo3_rizdvo_7.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2_6.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3_6.jpg",
+            "link": "shopify://collections/strong-iron-gels",
+            "alt_text": "",
+            "heading": "Heading",
+            "subheading": "Subheading",
+            "cta_label": "CTA"
+          }
+        },
+        "slide_ttnETN": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/Kreo3_rizdvo_7.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2_6.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3_6.jpg",
+            "link": "https://vibeauty.nl/collections/strong-iron-gels",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_Wg7tHd": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2_03dfe9ef-1228-4f2d-84df-9cf322e518a2.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3_34f963da-791b-4c3f-8fba-5e402496eee2.jpg",
+            "link": "https://vibeauty.nl/collections/sale",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_Jf3FKd": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3_-2.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2-1.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3-1.jpg",
+            "link": "https://vibeauty.nl/products/draagbare-stofafzuiger-voor-manicure-pedicure-met-filter-ulka-nano-white",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_KwXDYk": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3_-3.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2-2.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3-2.jpg",
+            "link": "https://vibeauty.nl/products/actie-6-2-wintertinten-polish-pnb",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_NqVMEU": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3_-1.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2-5.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3-5.jpg",
+            "link": "https://vibeauty.nl/collections/sale",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_EiTWXa": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3_-4.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2-3.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3-3.jpg",
+            "link": "https://vibeauty.nl/collections/builder-gels",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        },
+        "slide_6BNrhQ": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "image_desktop": "shopify://shop_images/3_-5.jpg",
+            "image_tablet": "shopify://shop_images/Banner_4.2-4.jpg",
+            "image_mobile": "shopify://shop_images/Banner_4.3-4.jpg",
+            "link": "https://vibeauty.nl/collections/gel-nail-joia",
+            "alt_text": "",
+            "heading": "",
+            "subheading": "",
+            "cta_label": ""
+          }
+        }
+      },
+      "block_order": ["slide_bj7qVr", "slide_ttnETN", "slide_Wg7tHd", "slide_Jf3FKd", "slide_KwXDYk", "slide_NqVMEU", "slide_EiTWXa", "slide_6BNrhQ"],
+      "name": "Responsive Slideshow",
+      "settings": {}
+    },
+    "collection_list_7WPQBF": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_WM3YpK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "uv-led-4-in-1-biab-gel-pnb"
+          }
+        },
+        "featured_collection_QpqNHz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dry-heat"
+          }
+        },
+        "featured_collection_7xDWPG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nail-are-polish-4in1-joia-vegan"
+          }
+        },
+        "featured_collection_9KdH7C": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nail-dust-collector"
+          }
+        },
+        "featured_collection_bqCMtP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nail-and-cuticle-care"
+          }
+        },
+        "featured_collection_cWnxmj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "builder-gels"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_WM3YpK",
+        "featured_collection_QpqNHz",
+        "featured_collection_7xDWPG",
+        "featured_collection_9KdH7C",
+        "featured_collection_bqCMtP",
+        "featured_collection_cWnxmj"
+      ],
+      "settings": {
+        "title": "Popular categories",
+        "heading_size": 24,
+        "image_ratio": "square",
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "featured_collection_axr3cq": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "NEW ITEMS",
+        "heading_size": 24,
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-items",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_jznMjd": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BESTSELLERS",
+        "heading_size": 24,
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bestsellers",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "two_column_R33Mt8": {
+      "type": "two-column",
+      "blocks": {
+        "column_Mn6xXD": {
+          "type": "column",
+          "settings": {
+            "title": "PNB (Professional Nail Boutique)",
+            "title_color": "#414141",
+            "title_font_weight": 700,
+            "title_icon_1": "shopify://shop_images/Group_1008_1.png",
+            "title_icon_width_1": 113,
+            "title_icon_height_1": 67,
+            "title_icon_width_mobile_1": 90,
+            "title_icon_height_mobile_1": 53,
+            "title_icon_2": "shopify://shop_images/animals_1.png",
+            "title_icon_width_2": 62,
+            "title_icon_height_2": 66,
+            "title_icon_width_mobile_2": 50,
+            "title_icon_height_mobile_2": 53,
+            "title_icon_width_3": 62,
+            "title_icon_height_3": 113,
+            "title_icon_width_mobile_3": 50,
+            "title_icon_height_mobile_3": 50,
+            "description": "<ul><li>Durability and reliability of the coating</li><li><strong>Hypoallergenic/formula 7 & 12 Free;</strong></li><li>Innovation and eco technology/certified products made in USA</li><li>Represented in <strong>20 countries/more than 300 dealers</strong> all over the world</li></ul>",
+            "description_color": "#414141",
+            "image": "shopify://shop_images/banner-pnb.jpg"
+          }
+        },
+        "column_aTYDTm": {
+          "type": "column",
+          "settings": {
+            "title": "JOIA VEGAN",
+            "title_color": "#414141",
+            "title_font_weight": 700,
+            "title_icon_1": "shopify://shop_images/vegan.png",
+            "title_icon_width_1": 50,
+            "title_icon_height_1": 54,
+            "title_icon_width_mobile_1": 40,
+            "title_icon_height_mobile_1": 47,
+            "title_icon_2": "shopify://shop_images/animals.png",
+            "title_icon_width_2": 51,
+            "title_icon_height_2": 62,
+            "title_icon_width_mobile_2": 45,
+            "title_icon_height_mobile_2": 54,
+            "title_icon_3": "shopify://shop_images/image_3137.png",
+            "title_icon_width_3": 62,
+            "title_icon_height_3": 63,
+            "title_icon_width_mobile_3": 45,
+            "title_icon_height_mobile_3": 54,
+            "description": "<ul><li>First <strong>VEGAN brand</strong> og gel polishes</li><li>The products do not contain components of animal origin and are <strong>not tested on animals</strong></li><li>All used JOIA vegan vials are collected for proper recycling and disposal</li></ul>",
+            "description_color": "#414141",
+            "image": "shopify://shop_images/banner-joia.jpg"
+          }
+        }
+      },
+      "block_order": ["column_Mn6xXD", "column_aTYDTm"],
+      "settings": {
+        "header": "About Our Manufacturing",
+        "header_color": "#5b886c",
+        "header_font_weight": 700,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "header_padding_bottom": 16,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48,
+        "header_padding_bottom_mobile": 16
+      }
+    },
+    "custom_video_rWwmPi": {
+      "type": "custom-video",
+      "settings": {
+        "video": "shopify://files/videos/vibeauty-main-video.mp4",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "page_mkAKzw": {
+      "type": "page",
+      "settings": {
+        "page": "nail-wholesale-vibeauty-nl",
+        "heading_size": 24,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "newsletter_pw8xb9": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_hiR6DR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Can we help you?",
+            "heading_size": 24,
+            "heading_color": "#ffffff",
+            "heading_font_weight": 700
+          }
+        },
+        "link_VVnWWP": {
+          "type": "link",
+          "settings": {
+            "link_label": "info@vibeauty.nl",
+            "link_url": "mailto:info@vibeauty.nl"
+          }
+        },
+        "link_XdeJnK": {
+          "type": "link",
+          "settings": {
+            "link_icon": "shopify://shop_images/Vector_1.png",
+            "link_label": "WhatsApp",
+            "link_url": "https://api.whatsapp.com/send?phone=31611534831"
+          }
+        },
+        "email_form_ddQUqj": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading_hiR6DR", "link_VVnWWP", "link_XdeJnK", "email_form_ddQUqj"],
+      "settings": {
+        "background": "#96b2a1",
+        "padding_top": 52,
+        "padding_bottom": 24,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 12
+      }
+    }
+  },
+  "order": [
+    "banner_with_link_PXGj6t",
+    "slideshow_multi_device_Xc7PWC",
+    "collection_list_7WPQBF",
+    "featured_collection_axr3cq",
+    "featured_collection_jznMjd",
+    "two_column_R33Mt8",
+    "custom_video_rWwmPi",
+    "page_mkAKzw",
+    "newsletter_pw8xb9"
+  ]
+}
