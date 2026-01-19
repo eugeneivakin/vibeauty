@@ -1598,6 +1598,10 @@ a.product__text {
 .product .product-form__submit.button::after {
   display: none;
 }
+.product .advatages .accordion__content {
+  margin: 0;
+  padding: 1rem 0;
+}
 .product .advatages__item {
   padding: 17px;
   background: #f6f6f6;

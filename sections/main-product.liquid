@@ -1,6 +1,3 @@
-
-
-
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -21,8 +18,9 @@
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
-    {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}f<div class="benefits__text">
-    {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+    {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}f
+    <div class="benefits__text">
+      {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
   {% endunless %}
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
@@ -342,10 +340,9 @@
                                   </dd>
                                 </dl>
                               {%- else -%}
-
-                              <span class="price-per-item--current" style="color: #008000;">
-                                {{- 'products.product.volume_pricing.price_at_each' | t: price: variant_price -}}
-                              </span>
+                                <span class="price-per-item--current" style="color: #008000;">
+                                  {{- 'products.product.volume_pricing.price_at_each' | t: price: variant_price -}}
+                                </span>
                                 <span class="price-per-item--current">
                                   {{- 'products.product.volume_pricing.price_at_each' | t: price: variant_price -}}
                                 </span>
@@ -441,28 +438,43 @@
                     {% assign icon_handle = 'icon_' | append: index %}
                     {% assign icon_text_handle = 'icon_text_' | append: index %}
                     {% assign content_handle = 'content_' | append: index %}
-                    <div class="advatages__item">
-                      <div class="advatages__top">
-                        {% unless block.settings[icon_handle] == blank %}
-                          <div class="advantages__icon">
-                            {{
-                              block.settings[icon_handle]
-                              | image_url: width: 32, height: 32
-                              | image_tag: alt: block.settings[icon_handle].alt
-                            }}
+
+                    <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                      <details id="Details-{{ block.id }}-{{ forloop.index }}">
+                        <summary>
+                          <div class="summary__title">
+                            <h2 class="h4 accordion__title inline-richtext">
+                              {{ block.settings[icon_text_handle] }}
+                            </h2>
                           </div>
-                        {% endunless %}
-                        {% unless block.settings[icon_text_handle] == blank %}
-                          <div class="advantages__text">
-                            {{ block.settings[icon_text_handle] }}
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </summary>
+                        <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ forloop.index }}">
+                          <div class="advatages__item">
+                            <div class="advatages__top">
+                              {% unless block.settings[icon_handle] == blank %}
+                                <div class="advantages__icon">
+                                  {{
+                                    block.settings[icon_handle]
+                                    | image_url: width: 32, height: 32
+                                    | image_tag: alt: block.settings[icon_handle].alt
+                                  }}
+                                </div>
+                              {% endunless %}
+                              {% unless block.settings[icon_text_handle] == blank %}
+                                <div class="advantages__text">
+                                  {{ block.settings[icon_text_handle] }}
+                                </div>
+                              {% endunless %}
+                            </div>
+                            {% unless block.settings[content_handle] == blank %}
+                              <div class="advatages__content">
+                                {{ block.settings[content_handle] }}
+                              </div>
+                            {% endunless %}
                           </div>
-                        {% endunless %}
-                      </div>
-                      {% unless block.settings[content_handle] == blank %}
-                        <div class="advatages__content">
-                          {{ block.settings[content_handle] }}
                         </div>
-                      {% endunless %}
+                      </details>
                     </div>
                   {% endfor %}
                 </div>
@@ -660,7 +672,7 @@
                                 <span class="svg-wrapper">
                                   {{- 'icon-caret.svg' | inline_asset_content -}}
                                 </span>
-                              </button>                  
+                              </button>
                             </div>
                           {%- endif -%}
                         </slideshow-component>
