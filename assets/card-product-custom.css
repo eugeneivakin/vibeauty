@@ -49,12 +49,6 @@
   padding: 0;
 }
 
-.featured-collection .card__information .card__heading a:after,
-.related-products .card__information .card__heading a:after,
-.template-collection-page .card__information .card__heading a:after{
-  content: none;
-}
-
 .featured-collection .card__information .card__heading,
 .related-products .card__information .card__heading,
 .template-collection-page .card__information .card__heading {
