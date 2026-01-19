@@ -1569,8 +1569,7 @@ a.product__text {
   display: flex;
   gap: 24px;
   max-width: 480px;
-  padding: 24px 16px;
-  padding-right: 0;
+  padding: 24px 0 0 16px;
 }
 .product .product-quatity-with-buy-buttons .product-form {
   margin: 0;
@@ -1808,6 +1807,22 @@ product-info .product .product__info-wrapper.grid__item {
   height: 100%;
 }
 
+.product .product-by-buttons {
+  flex-grow: 1;
+}
+
 .product .product-form__submit {
   margin: 0;
+}
+
+.essential-upsell-cross-sell-block {
+  max-width: 480px;
+}
+
+@media (max-width: 990px) {
+  .product .product-form__buttons,
+  .product .product-quatity-with-buy-buttons,
+  .essential-upsell-cross-sell-block {
+    max-width: none;
+  }
 }
