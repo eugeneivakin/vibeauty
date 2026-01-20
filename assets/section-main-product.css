@@ -1791,6 +1791,31 @@ product-info .product .product__info-wrapper.grid__item {
   padding-inline: 0 !important;
 }
 
+.product ._lably_item__main {
+  height: auto !important;
+  min-width: 0 !important;
+  top: 1.5rem !important;
+  right: 1.5rem !important;
+}
+
+.product ._lably_item__main > div {
+  animation: none !important;
+}
+
+.product ._lably_item__main div {
+  clip-path: none !important;
+  aspect-ratio: auto !important;
+  border-radius: 4px !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+.product ._lably_item__main span {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  padding: 3px 5px !important;
+}
+
 @media (max-width: 990px) {
   .product .product-form__buttons,
   .product .product-quatity-with-buy-buttons,

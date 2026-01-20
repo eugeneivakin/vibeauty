@@ -29,6 +29,8 @@
           "settings": {
             "color_scheme": "scheme-1",
             "image_desktop": "shopify://shop_images/frosted-winter-window-glass.jpg",
+            "image_tablet": "shopify://shop_images/frosted-winter-window-glass-tablet.jpg",
+            "image_mobile": "shopify://shop_images/frosted-winter-window-glass-mobile.jpg",
             "link": "shopify://collections/strong-iron-gels",
             "alt_text": "",
             "heading": "Discover the Best Cosmetics at Our Online Store!",
