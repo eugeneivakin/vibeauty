@@ -12,14 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "inventory_xzg4G8": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": true
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -32,6 +24,14 @@
           "type": "sku",
           "settings": {
             "text_style": "body"
+          }
+        },
+        "inventory_xzg4G8": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
           }
         },
         "price": {
@@ -84,10 +84,10 @@
         }
       },
       "block_order": [
-        "inventory_xzg4G8",
         "title",
         "rivyo_product_reviews_wc_product_review_badge_3i8hQC",
         "sku_DR6tpw",
+        "inventory_xzg4G8",
         "price",
         "variant_picker",
         "quantity_selector",

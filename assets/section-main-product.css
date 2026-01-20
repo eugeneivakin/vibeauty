@@ -1568,8 +1568,7 @@ a.product__text {
 .product .product-quatity-with-buy-buttons {
   display: flex;
   gap: 24px;
-  max-width: 480px;
-  padding: 24px 0 0 16px;
+  padding: 24px 0 0;
 }
 .product .product-quatity-with-buy-buttons .product-form {
   margin: 0;
@@ -1701,9 +1700,6 @@ product-info .product .product__info-wrapper.grid__item {
   .product .product__info-wrapper {
     padding-left: 0;
   }
-  .product .price__container {
-    padding-left: 16px;
-  }
   product-info .product .product__media-wrapper.grid__item {
     margin-bottom: 30px;
   }
@@ -1819,8 +1815,8 @@ product-info .product .product__info-wrapper.grid__item {
   margin: 0;
 }
 
-.essential-upsell-cross-sell-block {
-  max-width: 480px;
+.product div.giraffly-right-Bar-Preview-Example {
+  padding-inline: 0 !important;
 }
 
 @media (max-width: 990px) {
