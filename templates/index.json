@@ -28,14 +28,12 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-1",
-            "image_desktop": "shopify://shop_images/Kreo3_rizdvo_7.jpg",
-            "image_tablet": "shopify://shop_images/Banner_4.2_6.jpg",
-            "image_mobile": "shopify://shop_images/Banner_4.3_6.jpg",
+            "image_desktop": "shopify://shop_images/frosted-winter-window-glass.jpg",
             "link": "shopify://collections/strong-iron-gels",
             "alt_text": "",
-            "heading": "Heading",
-            "subheading": "Subheading",
-            "cta_label": "CTA"
+            "heading": "Discover the Best Cosmetics at Our Online Store!",
+            "subheading": "Discover the Ultimate Beauty Secret: All Products for Your Cosmetic Needs.",
+            "cta_label": "Shop now"
           }
         },
         "slide_ttnETN": {
