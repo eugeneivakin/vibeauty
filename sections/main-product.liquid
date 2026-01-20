@@ -451,22 +451,6 @@
                         </summary>
                         <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ forloop.index }}">
                           <div class="advatages__item">
-                            <div class="advatages__top">
-                              {% unless block.settings[icon_handle] == blank %}
-                                <div class="advantages__icon">
-                                  {{
-                                    block.settings[icon_handle]
-                                    | image_url: width: 32, height: 32
-                                    | image_tag: alt: block.settings[icon_handle].alt
-                                  }}
-                                </div>
-                              {% endunless %}
-                              {% unless block.settings[icon_text_handle] == blank %}
-                                <div class="advantages__text">
-                                  {{ block.settings[icon_text_handle] }}
-                                </div>
-                              {% endunless %}
-                            </div>
                             {% unless block.settings[content_handle] == blank %}
                               <div class="advatages__content">
                                 {{ block.settings[content_handle] }}

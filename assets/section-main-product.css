@@ -1601,35 +1601,7 @@ a.product__text {
   margin: 0;
   padding: 1rem 0;
 }
-.product .advatages__item {
-  padding: 17px;
-  background: #f6f6f6;
-  border-radius: 12px;
-  max-width: 480px;
-}
-.product .advatages__item:first-child {
-  background: rgb(184 219 198 / 30%);
-}
-.product .advatages__item:not(:last-child) {
-  margin-bottom: 16px;
-}
-.product .advatages__top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.proudct .advantages__icon {
-  height: 32px;
-}
-.product .advantages__text {
-  color: #1a1a1a;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 600;
-}
 .product .advatages__content {
-  padding-left: 44px;
-  margin-top: 8px;
   font-size: 14px;
   line-height: 20px;
   color: #1a1a1a;
