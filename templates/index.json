@@ -348,37 +348,33 @@
         "benefit_EmgfaR": {
           "type": "benefit",
           "settings": {
-            "heading": "Heading",
-            "content": "<p>Content</p>"
+            "icon": "shopify://shop_images/ic-truck.png",
+            "heading": "Delivery time",
+            "content": "<ul><li>Ordered before 16:00, delivered within <strong>1-3 business days</strong>. Available items only.</li><li>Order online, pick up immediately in our store in <strong>Rotterdam</strong>!</li><li>Delivery to: 🇳🇱 <strong>Netherlands</strong>, 🇱🇺 <strong>Luxembourg</strong> and 🇧🇪 <strong>Belgium</strong></li><li>You will receive a <strong>Track&Trace</strong> code once your order has been handed over to the courier.</li></ul>"
           }
         },
         "benefit_yzJyUg": {
           "type": "benefit",
           "settings": {
-            "heading": "Heading",
-            "content": "<p>Content</p>"
+            "icon": "shopify://shop_images/material-symbols_send-money.png",
+            "heading": "Free shipping available",
+            "content": "<p>Shipping cost: €5.95 — but free on orders from:</p><ul><li><strong>€60 or more (Netherlands)</strong></li><li><strong>€100 or more (Belgium/Luxembourg)</strong></li></ul><p>Valid on JOIA Vegan & PNB products</p>"
           }
         },
         "benefit_PcjQpD": {
           "type": "benefit",
           "settings": {
-            "heading": "Heading",
-            "content": "<p>Content</p>"
-          }
-        },
-        "benefit_GTd47Q": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Heading",
-            "content": "<p>Content</p>"
+            "icon": "shopify://shop_images/ic-quality.png",
+            "heading": "Need help or advice?",
+            "content": "<p>Send us a <a href=\"https://api.whatsapp.com/send?phone=31611534831\">WhatsApp message</a> — our beauty experts are ready to give you fast, personal guidance.                                     </p>"
           }
         }
       },
-      "block_order": ["benefit_EmgfaR", "benefit_yzJyUg", "benefit_PcjQpD", "benefit_GTd47Q"],
+      "block_order": ["benefit_EmgfaR", "benefit_yzJyUg", "benefit_PcjQpD"],
       "name": "Benefits",
       "settings": {
-        "section_background": "#96b2a1",
-        "section_color": "#ffffff",
+        "section_background": "rgba(0,0,0,0)",
+        "section_color": "#000000",
         "padding_top": 50,
         "padding_bottom": 50,
         "padding_top_mobile": 50,

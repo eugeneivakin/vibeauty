@@ -1,0 +1,59 @@
+@use "mixins/media" as *;
+
+.content-with-benefits {
+  color: #fff;
+}
+
+.content-with-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem 1rem;
+  grid-auto-flow: row;
+  align-content: start;
+
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.content-with-benefits__grid-item {
+  text-align: center;
+}
+
+.content-with-benefits {
+  .benefit__icon {
+    height: 90px;
+    margin: 0 0 1rem;
+
+    @include md {
+      height: 120px;
+    }
+
+    img,
+    svg {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  h3 {
+    color: inherit;
+    margin: 0 0 1rem;
+  }
+
+  .benefit__content {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}

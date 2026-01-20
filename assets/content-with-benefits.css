@@ -4,12 +4,22 @@
 
 .content-with-benefits__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   gap: 2rem 1rem;
   grid-auto-flow: row;
   align-content: start;
-  align-items: center;
+}
+@media screen and (min-width: 576px) {
+  .content-with-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 750px) {
+  .content-with-benefits__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
 }
 
 .content-with-benefits__grid-item {
@@ -17,34 +27,29 @@
 }
 
 .content-with-benefits .benefit__icon {
-  height: 120px;
+  height: 90px;
   margin: 0 0 1rem;
 }
-
+@media screen and (min-width: 990px) {
+  .content-with-benefits .benefit__icon {
+    height: 120px;
+  }
+}
 .content-with-benefits .benefit__icon img,
 .content-with-benefits .benefit__icon svg {
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
 }
-
 .content-with-benefits .benefit__icon svg {
   fill: currentColor;
 }
-
-.content-with-benefits h2 {
+.content-with-benefits h3 {
   color: inherit;
   margin: 0 0 1rem;
 }
-
-@media screen and (min-width: 750px) {
-  .content-with-benefits__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .content-with-benefits__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.content-with-benefits .benefit__content {
+  font-size: 1.4rem;
+  text-align: left;
 }
