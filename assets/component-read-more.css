@@ -1,0 +1,33 @@
+read-more [data-content-short] p {
+  padding-bottom: 0 !important;
+}
+read-more [data-content-switcher] {
+  background: none;
+  border: 0;
+  color: #96b2a1;
+  cursor: pointer;
+  padding: 0;
+  text-transform: capitalize;
+}
+read-more [data-content-switcher]:hover {
+  color: #5b886c;
+}
+read-more [data-content-switcher] span + span {
+  display: none;
+}
+read-more [data-content-full] {
+  display: none;
+}
+
+read-more.active [data-content-short] {
+  display: none;
+}
+read-more.active [data-content-switcher] span {
+  display: none;
+}
+read-more.active [data-content-switcher] span + span {
+  display: inline;
+}
+read-more.active [data-content-full] {
+  display: block;
+}

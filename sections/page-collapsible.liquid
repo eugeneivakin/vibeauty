@@ -1,7 +1,8 @@
 {% if section.settings.page.content != blank %}
   {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
-  {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+  {{ 'component-read-more.css' | asset_url | stylesheet_tag }}
   {{ 'section-page-collapsible.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'read-more.js' | asset_url }}" defer="defer"></script>
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -42,29 +43,32 @@
   {%- endstyle -%}
 
   <div class="page-width section-{{ section.id }}-padding">
-    <div class="accordion quick-add-hidden">
-      <details id="Details-{{ section.id }}">
-        <summary>
-          <div class="summary__title">
-            <h2 class="h4 accordion__title inline-richtext">
-              {{ section.settings.heading | default: section.settings.page.title | escape }}
-            </h2>
+    <h2 class="page-title{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.page.title != blank -%}
+        {{ section.settings.page.title | escape }}
+      {%- else -%}
+        {{ 'sections.page.title' | t }}
+      {%- endif -%}
+    </h2>
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.page.content != blank -%}
+        <read-more>
+          <div data-content-short>
+            <p>{{ section.settings.page.content | strip_html | truncatewords: section.settings.truncate }}</p>
           </div>
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </summary>
-        <div class="accordion__content rte" id="PageAccordion-{{ section.id }}">
-          <h2 class="page-title{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            {%- if section.settings.page.title != blank -%}
-              {{ section.settings.page.title | escape }}
-            {%- else -%}
-              {{ 'sections.page.title' | t }}
-            {%- endif -%}
-          </h2>
-          <div>
+          <div data-content-full>
             {{ section.settings.page.content }}
           </div>
+          <button data-content-switcher>
+            <span>{{ 'sections.page_collapsible.read_more' | t }}</span>
+            <span>{{ 'sections.page_collapsible.read_less' | t }}</span>
+          </button>
+        </read-more>
+      {%- else -%}
+        <div class="page-placeholder-wrapper placeholder">
+          {{ 'page' | placeholder_svg_tag: 'page-placeholder' }}
         </div>
-      </details>
+      {%- endif -%}
     </div>
   </div>
 {% endif %}
@@ -79,11 +83,10 @@
   },
   "settings": [
     {
-      "type": "text",
-      "id": "heading",
-      "default": "t:sections.page_collapsible.settings.heading.default",
-      "info": "t:sections.page_collapsible.settings.heading.info",
-      "label": "t:sections.page_collapsible.settings.heading.label"
+      "type": "number",
+      "id": "truncate",
+      "label": "Number of words for a short description",
+      "default": 30
     },
     {
       "type": "page",

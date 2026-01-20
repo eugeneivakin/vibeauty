@@ -348,6 +348,10 @@
     "page": {
       "title": "Page title"
     },
+    "page_collapsible": {
+      "read_more": "Read more",
+      "read_less": "Read less"
+    },
     "quick_order_list": {
       "product_total": "Product subtotal",
       "view_cart": "View cart",

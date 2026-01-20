@@ -335,13 +335,13 @@
       "type": "page-collapsible",
       "name": "t:sections.page_collapsible.presets.name",
       "settings": {
-        "heading": "",
+        "truncate": 30,
         "page": "nail-wholesale-vibeauty-nl",
         "heading_size": 24,
         "padding_top": 24,
-        "padding_bottom": 0,
+        "padding_bottom": 20,
         "padding_top_mobile": 16,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 16
       }
     },
     "benefits_GVGgqk": {
@@ -379,8 +379,8 @@
       "block_order": ["benefit_EmgfaR", "benefit_yzJyUg", "benefit_PcjQpD", "benefit_GTd47Q"],
       "name": "Benefits",
       "settings": {
-        "section_background": "#96B2A1",
-        "section_color": "#FFFFFF",
+        "section_background": "#96b2a1",
+        "section_color": "#ffffff",
         "padding_top": 50,
         "padding_bottom": 50,
         "padding_top_mobile": 50,

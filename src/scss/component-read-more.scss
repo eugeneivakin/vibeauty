@@ -1,0 +1,51 @@
+@use "mixins/media" as *;
+
+read-more {
+  [data-content-short] {
+    p {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  [data-content-switcher] {
+    background: none;
+    border: 0;
+    color: #96b2a1;
+    cursor: pointer;
+    padding: 0;
+    text-transform: capitalize;
+
+    &:hover {
+      color: #5b886c;
+    }
+
+    span {
+      + span {
+        display: none;
+      }
+    }
+  }
+
+  [data-content-full] {
+    display: none;
+  }
+}
+
+read-more.active {
+  [data-content-short] {
+    display: none;
+  }
+
+  [data-content-switcher] {
+    span {
+      display: none;
+      + span {
+        display: inline;
+      }
+    }
+  }
+
+  [data-content-full] {
+    display: block;
+  }
+}

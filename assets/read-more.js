@@ -1,0 +1,1 @@
+class ReadMore extends HTMLElement{constructor(){super()}connectedCallback(){const e=this.querySelector("[data-content-switcher]");e&&e.addEventListener("click",()=>this.toggleActive())}toggleActive(){this.classList.toggle("active")}}customElements.define("read-more",ReadMore);
