@@ -111,6 +111,7 @@
     endif
     if block.type == 'categories'
       assign menu = block.settings.menu
+      assign menu_mobile = block.settings.menu_mobile | default: menu
     endif
   endfor
 -%}
@@ -133,7 +134,7 @@
     <div class="header__mobile">
       {%- liquid
         if section.settings.menu != blank
-          render 'header-drawer', menu: menu
+          render 'header-drawer', menu: menu_mobile
         endif
       -%}
       {% render 'header-search', input_id: 'Search-In-Modal' %}
@@ -896,7 +897,12 @@
         {
           "type": "link_list",
           "id": "menu",
-          "label": "Menu"
+          "label": "Menu for desktop"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_mobile",
+          "label": "Menu for mobile"
         },
         {
           "type": "text",

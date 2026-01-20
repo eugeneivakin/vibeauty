@@ -41,6 +41,7 @@
           "type": "categories",
           "settings": {
             "menu": "categories-menu",
+            "menu_mobile": "categories-menu-mobile",
             "button_name": "Catalog",
             "button_image": "shopify://shop_images/ion_menu-outline-white.png",
             "additional_label_1": "Gel polish",
