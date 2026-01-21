@@ -15,6 +15,8 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-read-more.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'read-more.js' | asset_url }}" defer="defer"></script>
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -690,7 +692,21 @@
           {%- if product.description != blank -%}
             <div class="product__description rte" {{ block.shopify_attributes }}>
               <span class="product__description--heading">Description</span>
-              {{ product.description }}
+              {% comment %} {{ product.description }} {% endcomment %}
+              <read-more>
+                <div data-content-short>
+                  <p>
+                    {{ product.description | strip_html | truncatewords: block.settings.truncate }}
+                  </p>
+                </div>
+                <div data-content-full>
+                  {{ product.description }}
+                </div>
+                <button data-content-switcher>
+                  <span>{{ 'sections.page_collapsible.read_more' | t }}</span>
+                  <span>{{ 'sections.page_collapsible.read_less' | t }}</span>
+                </button>
+              </read-more>
             </div>
           {%- endif -%}
         {% when 'benefits' %}
@@ -722,45 +738,50 @@
             {% endfor %}
           </div>
         {% when 'specifications' %}
-          <div class="specifications">
-            {% unless block.settings.title == blank %}
-              <div class="specifications__title">
-                {{ block.settings.title }}
+          {%- if block.settings.first_row_value != blank
+            and block.settings.second_row_value != blank
+            and block.settings.third_row_value != blank
+          -%}
+            <div class="specifications">
+              {% unless block.settings.title == blank %}
+                <div class="specifications__title">
+                  {{ block.settings.title }}
+                </div>
+              {% endunless %}
+              <div class="specifications__table">
+                {% if block.settings.first_row_value != blank %}
+                  <div class="specifications__row">
+                    <div class="specifications__label">
+                      {{ block.settings.first_row_label }}
+                    </div>
+                    <div class="specifications__value">
+                      {{ block.settings.first_row_value }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if block.settings.second_row_value != blank %}
+                  <div class="specifications__row">
+                    <div class="specifications__label">
+                      {{ block.settings.second_row_label }}
+                    </div>
+                    <div class="specifications__value">
+                      {{ block.settings.second_row_value }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if block.settings.third_row_value != blank %}
+                  <div class="specifications__row">
+                    <div class="specifications__label">
+                      {{ block.settings.third_row_label }}
+                    </div>
+                    <div class="specifications__value">
+                      {{ block.settings.third_row_value }}
+                    </div>
+                  </div>
+                {% endif %}
               </div>
-            {% endunless %}
-            <div class="specifications__table">
-              {% if block.settings.first_row_value != blank %}
-                <div class="specifications__row">
-                  <div class="specifications__label">
-                    {{ block.settings.first_row_label }}
-                  </div>
-                  <div class="specifications__value">
-                    {{ block.settings.first_row_value }}
-                  </div>
-                </div>
-              {% endif %}
-              {% if block.settings.second_row_value != blank %}
-                <div class="specifications__row">
-                  <div class="specifications__label">
-                    {{ block.settings.second_row_label }}
-                  </div>
-                  <div class="specifications__value">
-                    {{ block.settings.second_row_value }}
-                  </div>
-                </div>
-              {% endif %}
-              {% if block.settings.third_row_value != blank %}
-                <div class="specifications__row">
-                  <div class="specifications__label">
-                    {{ block.settings.third_row_label }}
-                  </div>
-                  <div class="specifications__value">
-                    {{ block.settings.third_row_value }}
-                  </div>
-                </div>
-              {% endif %}
             </div>
-          </div>
+          {%- endif -%}
       {% endcase %}
     {% endfor %}
     {% render 'product-media-modal', variant_images: variant_images %}
@@ -1007,7 +1028,15 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "number",
+          "id": "truncate",
+          "label": "Number of words for a short description",
+          "default": 100
+        }
+      ]
     },
     {
       "type": "share",

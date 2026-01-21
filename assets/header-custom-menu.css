@@ -60,10 +60,23 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
-  transition: color 0.3s ease-out;
+  position: relative;
 }
-.additional-links__item:hover {
-  color: #96b2a1;
+.additional-links__item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  opacity: 0.5;
+  right: -4px;
+  top: 0;
+  transition: background 0.3s ease-out;
+}
+.additional-links__item:not(.active):hover:after {
+  background: #96b2a1;
+}
+.additional-links__item.active span {
+  color: #96b2a1 !important;
 }
 .header-categories {
   padding: 20px 0;

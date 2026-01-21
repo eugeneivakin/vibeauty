@@ -1,3 +1,5 @@
+{{ 'section-two-banners.css' | asset_url | stylesheet_tag }}
+
 {% style %}
   #shopify-section-{{ section.id }} .two-banners {
     padding-top: {{ section.settings.padding_top_mobile }}px;
@@ -11,6 +13,15 @@
   }
 {% endstyle %}
 
+{% capture banner_title %}
+  {%- case banner_url -%}
+    {%- when contains 'blogs' -%}
+      blogs
+    {%- else -%}
+      no blogs
+  {%- endcase -%}
+{% endcapture %}
+
 <div class="two-banners">
   <div class="page-width">
     <div class="two-banners__wrapper">
@@ -19,8 +30,10 @@
           {{
             section.settings.first_banner
             | image_url: width: section.settings.first_banner.width, height: section.settings.first_banner.height
-            | image_tag:alt: section.settings.first_banner.alt
+            | image_tag: alt: section.settings.first_banner.alt
           }}
+          {%- assign banner_url = section.settings.first_banner_url -%}
+          {% render 'two-banners-title', banner_url: banner_url %}
         </a>
       {% endunless %}
       {% unless section.settings.second_banner == blank %}
@@ -28,36 +41,16 @@
           {{
             section.settings.second_banner
             | image_url: width: section.settings.second_banner.width, height: section.settings.second_banner.height
-            | image_tag:alt: section.settings.second_banner.alt
+            | image_tag: alt: section.settings.second_banner.alt
           }}
+          {%- assign banner_url = section.settings.second_banner_url -%}
+          {% render 'two-banners-title', banner_url: banner_url %}
         </a>
       {% endunless %}
     </div>
   </div>
 </div>
-<style>
-  .two-banners .two-banners__wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .two-banners .two-banners__item {
-    width: 100%;
-  }
-  .two-banners .two-banners__item img {
-    width: 100%;
-  }
-  @media(max-width:990px) {
-    .two-banners .page-width{
-      padding: 0 16px;
-    }
-  }
-  @media(min-width: 768px) {
-    .two-banners .two-banners__item {
-      width: 48.5%;
-    }
-  }
-</style>
+
 {% schema %}
 {
   "name": "Two banners",

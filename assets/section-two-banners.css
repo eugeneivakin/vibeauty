@@ -1,0 +1,37 @@
+@media screen and (max-width: 990px) {
+  .two-banners .page-width {
+    padding: 0 16px;
+  }
+}
+.two-banners .two-banners__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.two-banners .two-banners__item {
+  position: relative;
+  width: 100%;
+}
+.two-banners .two-banners__item:hover {
+  color: #96b2a1;
+}
+@media screen and (min-width: 750px) {
+  .two-banners .two-banners__item {
+    width: 48.5%;
+  }
+}
+.two-banners .two-banners__item img {
+  display: block;
+  width: 100%;
+}
+.two-banners .two-banners__title {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  position: absolute;
+  width: 100%;
+}

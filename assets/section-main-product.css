@@ -1637,11 +1637,6 @@ product-info .benefits {
   font-weight: 700;
   line-height: 15.5px;
 }
-product-info .product__description--heading {
-  font-size: 16px;
-  line-height: 29px;
-  font-weight: 600;
-}
 product-info .product__description p,
 product-info .product__description font {
   font-size: 14px;
@@ -1718,6 +1713,7 @@ product-info .product .product__info-wrapper.grid__item {
   margin-bottom: 24px;
   border-bottom: 1px solid #f2f4f8;
 }
+.product__description--heading,
 .specifications__title {
   font-size: 24px;
   color: #414141;

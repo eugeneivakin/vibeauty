@@ -1,0 +1,45 @@
+@use "mixins/media" as *;
+
+.two-banners {
+  .page-width {
+    @include md-max {
+      padding: 0 16px;
+    }
+  }
+
+  .two-banners__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .two-banners__item {
+    position: relative;
+    width: 100%;
+
+    &:hover {
+      color: #96b2a1;
+    }
+
+    @include sm {
+      width: 48.5%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .two-banners__title {
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    position: absolute;
+    width: 100%;
+  }
+}

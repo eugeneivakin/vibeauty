@@ -54,7 +54,13 @@
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-    <div class="wishlist-engine" data-product_id="{{  card_product.id }}" data-variant_id="{{ card_product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
+      <div
+        class="wishlist-engine"
+        data-product_id="{{  card_product.id }}"
+        data-variant_id="{{ card_product.selected_or_first_available_variant.id }}"
+        data-full_button="false"
+        data-css="true"
+      ></div>
       <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
@@ -106,7 +112,6 @@
                 >
               {%- endif -%}
             </div>
-           
           </div>
         {%- endif -%}
         <div class="card__content">
@@ -176,40 +181,8 @@
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
-            {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
-              {% liquid
-                assign rating_decimal = 0
-                assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
-                if decimal >= 0.3 and decimal <= 0.7
-                  assign rating_decimal = 0.5
-                elsif decimal > 0.7
-                  assign rating_decimal = 1
-                endif
-              %}
-              <div
-                class="rating"
-                role="img"
-                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
-              >
-                <span
-                  aria-hidden="true"
-                  class="rating-star"
-                  style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                ></span>
-              </div>
-              <p class="rating-text caption">
-                <span aria-hidden="true">
-                  {{- card_product.metafields.reviews.rating.value }} /
-                  {{ card_product.metafields.reviews.rating.value.scale_max -}}
-                </span>
-              </p>
-              <p class="rating-count caption">
-                <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
-                <span class="visually-hidden">
-                  {{- card_product.metafields.reviews.rating_count }}
-                  {{ 'accessibility.total_reviews' | t -}}
-                </span>
-              </p>
+            {%- if show_rating -%}
+              {% render 'raviyo-badge', product: card_product %}
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
@@ -436,7 +409,6 @@
                 {%- endform -%}
               </product-form>
             {%- endif -%}
-            
           </div>
         {% elsif quick_add == 'bulk' %}
           {% if card_product.variants.size == 1 %}
@@ -689,7 +661,7 @@
             </quick-add-modal>
           {%- else -%}
             {%- assign quantity_id = 'Quantity-' | append: section.id | append: '-' | append: card_product.id -%}
-            
+
             <product-form data-section-id="{{ section.id }}">
               {%- form 'product',
                 card_product,
@@ -705,7 +677,7 @@
                   <label class="form__label" for="{{ quantity_id }}" style="display: none;">
                     {{ 'products.product.quantity.label' | t }}
                   </label>
-            
+
                   <quantity-input class="quantity">
                     <button class="quantity__button no-js-hidden" name="minus" type="button">
                       <span class="visually-hidden">
@@ -731,7 +703,7 @@
                     </button>
                   </quantity-input>
                 </div>
-            
+
                 <input
                   type="hidden"
                   name="id"
@@ -741,7 +713,7 @@
                     disabled
                   {% endunless %}
                 >
-            
+
                 <button
                   id="{{ product_form_id }}-submit"
                   type="submit"
@@ -769,22 +741,21 @@
                       {{ 'products.product.sold_out' | t }}
                     {%- endif -%}
                   </span>
-            
+
                   <span class="sold-out-message hidden">
                     {{ 'products.product.sold_out' | t }}
                   </span>
-            
+
                   {%- if horizontal_quick_add -%}
                     <span class="icon-wrap">
                       {{- 'icon-plus.svg' | inline_asset_content -}}
                     </span>
                   {%- endif -%}
-            
+
                   {%- render 'loading-spinner' -%}
                 </button>
               {%- endform -%}
             </product-form>
-
           {%- endif -%}
         </div>
       {% endif %}

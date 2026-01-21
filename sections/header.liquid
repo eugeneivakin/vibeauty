@@ -454,7 +454,8 @@
                     {% assign link_handle = 'additional_link_' | append: index %}
                     {% assign icon_handle = 'additional_icon_' | append: index %}
                     {% if block.settings[label_handle] != blank or block.settings[icon_handle] != blank %}
-                      <a class="additional-links__item" href="{{ block.settings[link_handle] }}">
+                      
+                      <a class="additional-links__item {% if request.path == block.settings[link_handle] %}active{% endif %}" href="{{ block.settings[link_handle] }}">
                         {% unless block.settings[icon_handle] == blank %}
                           {{ block.settings[icon_handle] |  image_url: width: block.settings[icon_handle].width |  image_tag: alt: block.settings[icon_handle].alt}}
                         {% endunless %}
@@ -463,7 +464,6 @@
                             {{ block.settings[label_handle] }}
                           </span>
                         {% endunless %}
-                        
                       </a>
                     {% endif %}
                   {% endfor %}

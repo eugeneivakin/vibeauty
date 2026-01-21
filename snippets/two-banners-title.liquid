@@ -1,0 +1,17 @@
+{% liquid
+  if banner_url contains 'blogs'
+    assign banner_url = banner_url | remove: '/blogs/'
+    assign banner_title = articles[banner_url].title
+  elsif banner_url contains 'policies'
+    for policy in shop.policies
+      if policy != blank and policy.url == banner_url
+        assign banner_title = policy.title
+        break
+      endif
+    endfor
+  else
+    assign banner_title = ''
+  endif
+%}
+
+<strong class="two-banners__title">{{ banner_title }}</strong>
