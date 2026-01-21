@@ -335,7 +335,7 @@
       "type": "page-collapsible",
       "name": "t:sections.page_collapsible.presets.name",
       "settings": {
-        "truncate": 30,
+        "truncate": 100,
         "page": "nail-wholesale-vibeauty-nl",
         "heading_size": 24,
         "padding_top": 24,
