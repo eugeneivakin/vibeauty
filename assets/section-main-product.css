@@ -1574,6 +1574,9 @@ a.product__text {
   font-weight: 700;
   line-height: 38px;
 }
+.product .price .price-item--percent {
+  display: inline;
+}
 .product .product__form-installment {
   margin: 0;
 }

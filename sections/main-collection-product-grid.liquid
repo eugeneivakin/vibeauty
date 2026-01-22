@@ -60,6 +60,13 @@
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
+          {% render 'facets',
+            results: collection,
+            enable_filtering: section.settings.enable_filtering,
+            enable_sorting: section.settings.enable_sorting,
+            filter_type: section.settings.filter_type,
+            paginate: paginate
+          %}
           <div class="collection-categories">
             <h3 class="collection-categories__title">Categories</h3>
             <ul class="collection-categories__list">
@@ -106,18 +113,9 @@
               {% endfor %}
             </ul>
           </div>
-          {% render 'facets',
-            results: collection,
-            enable_filtering: section.settings.enable_filtering,
-            enable_sorting: section.settings.enable_sorting,
-            filter_type: section.settings.filter_type,
-            paginate: paginate
-          %}
         </aside>
       {%- endif -%}
       <div class="template-collection-page__facets-product">
-       
-
         {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
           <facet-filters-form class="facets facets-vertical-sort page-width">
             <form class="facets-vertical-form" id="FacetSortForm">
@@ -191,38 +189,33 @@
           </facet-filters-form>
         {%- endif -%}
 
-
         {% assign banner_link = collection.metafields.custom.banner_link_new %}
         {% assign banner_desktop = collection.metafields.custom.banner_desktop %}
         {% assign banner_tablet = collection.metafields.custom.banner_tablet %}
         {% assign banner_mobile = collection.metafields.custom.banner_mobile %}
-        
+
         {% if banner_desktop or banner_tablet or banner_mobile %}
           <div class="collection-banner">
             {% if banner_link %}
               <a href="{{ banner_link }}" class="collection-banner-link">
             {% endif %}
-                <picture>
-                  {% if banner_mobile %}
-                    <source media="(max-width: 767px)" srcset="{{ banner_mobile | img_url: 'master' }}">
-                  {% endif %}
-                  {% if banner_tablet %}
-                    <source media="(max-width: 1024px)" srcset="{{ banner_tablet | img_url: 'master' }}">
-                  {% endif %}
-                  {% if banner_desktop %}
-                    <img src="{{ banner_desktop | img_url: 'master' }}" alt="{{ collection.title }} banner">
-                  {% endif %}
-                </picture>
+            <picture>
+              {% if banner_mobile %}
+                <source media="(max-width: 767px)" srcset="{{ banner_mobile | img_url: 'master' }}">
+              {% endif %}
+              {% if banner_tablet %}
+                <source media="(max-width: 1024px)" srcset="{{ banner_tablet | img_url: 'master' }}">
+              {% endif %}
+              {% if banner_desktop %}
+                <img src="{{ banner_desktop | img_url: 'master' }}" alt="{{ collection.title }} banner">
+              {% endif %}
+            </picture>
             {% if banner_link %}
               </a>
             {% endif %}
           </div>
         {% endif %}
 
-
-
-    
-    
         <div
           class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           id="ProductGridContainer"
@@ -263,22 +256,22 @@
                 {% assign skip_card_product_styles = false %}
                 {%- for product in collection.products -%}
                   {%- unless product.tags contains 'hidden' or product.tags contains 'bonus' -%}
-                  <div
-                    class="grid__item"
-                  >
-                    {% render 'card-product',
-                      card_product: product,
-                      media_aspect_ratio: 'square',
-                      image_shape: section.settings.image_shape,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      show_vendor: section.settings.show_vendor,
-                      show_rating: section.settings.show_rating,
-                      skip_styles: skip_card_product_styles,
-                      quick_add: 'standard',
-                      section_id: section.id
-                    %}
-                  </div>
-                  {%- assign skip_card_product_styles = true -%}
+                    <div
+                      class="grid__item"
+                    >
+                      {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: 'square',
+                        image_shape: section.settings.image_shape,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        show_rating: section.settings.show_rating,
+                        skip_styles: skip_card_product_styles,
+                        quick_add: 'standard',
+                        section_id: section.id
+                      %}
+                    </div>
+                    {%- assign skip_card_product_styles = true -%}
                   {%- endunless -%}
                 {%- endfor -%}
               </ul>

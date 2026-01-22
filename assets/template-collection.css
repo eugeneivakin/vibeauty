@@ -111,6 +111,10 @@
   padding-bottom: 16px;
 }
 
+.collection-categories {
+  margin-top: 1rem;
+}
+
 .collection-categories__title {
   padding: 16px 20px;
   background: #fff;
