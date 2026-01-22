@@ -1536,8 +1536,14 @@ a.product__text {
   max-width: none;
 }
 
-.product .product__info-container > * + * {
+.product .product__info-container > * {
+  margin: 1rem 0;
+}
+/* .product .product__info-container > * + * {
   margin: 0;
+} */
+.product .product__info-wrapper .product__title {
+  margin-top: 0;
 }
 .product .product__info-wrapper .product__title h1 {
   font-size: 24px;
@@ -1545,19 +1551,22 @@ a.product__text {
   font-weight: 600;
   color: #414141;
 }
-.product .product__info-wrapper .product__title {
+.product .product__info-wrapper .rivyoReviewWidget {
+  padding: 0;
+}
+/* .product .product__info-wrapper .product__title {
   padding-bottom: 15px;
   margin: 0;
-}
+} */
 .product .product__sku {
   color: #414141;
   font-size: 12px;
-  margin: 0;
+  /* margin: 0; */
   font-weight: 400;
 }
 .product .price__container {
   margin: 0;
-  padding-top: 32px;
+  /* padding-top: 32px; */
 }
 .product .price__regular .price-item {
   color: #f44336;
@@ -1565,10 +1574,13 @@ a.product__text {
   font-weight: 700;
   line-height: 38px;
 }
+.product .product__form-installment {
+  margin: 0;
+}
 .product .product-quatity-with-buy-buttons {
   display: flex;
   gap: 24px;
-  padding: 24px 0 0;
+  /* padding: 24px 0 0; */
 }
 .product .product-quatity-with-buy-buttons .product-form {
   margin: 0;
@@ -1596,6 +1608,20 @@ a.product__text {
 .product .product-form__submit.button::before,
 .product .product-form__submit.button::after {
   display: none;
+}
+.product .essential-upsell-cross-sell-block > div > div {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+}
+.product [class^="giraffly-trust-badge-"] {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.product [class^="giraffly-trust-badge-"] .giraffly-right-Bar-Preview-Example {
+  padding: 0 !important;
+}
+.product .advatages .accordion {
+  margin: 0;
 }
 .product .advatages .accordion__content {
   margin: 0;
